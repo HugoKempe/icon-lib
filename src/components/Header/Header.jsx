@@ -2,6 +2,8 @@
 import React, { useState } from 'react'
 import './style/index.scss'
 
+import biohazard from '/icons/biohazard/solid.svg'
+
 const containerTitle = {text: "Unnamed Container", display: false}
 
 class Container extends React.Component {
@@ -17,7 +19,7 @@ class Container extends React.Component {
         this.setState({ titleVisible: !curr});
     }
     render() {
-        
+
     }
 }
 
@@ -27,11 +29,11 @@ function Header(props) {
 
     return(
         <div className="container">
-            <div className="container-main">
-                <h2>{title}</h2>
+            <div className="item">
+                <h2 className='label'>{title}</h2>
             </div>
-            <div className="container-extra">
-                {props.children}
+            <div className="item">
+                <h1 className='label'>{"Balls"}</h1>
             </div>
         </div>
     );
